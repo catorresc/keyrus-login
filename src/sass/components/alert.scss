@@ -1,0 +1,47 @@
+/** Custom messages **/
+.custom-alert{
+    display: none;
+    .custom-alert__main{
+        border: 1px solid;
+        border-radius: 5px;
+        max-width: 700px;
+        margin: 15px auto;
+        padding: 14px;
+        @include display-flex();
+        @include flex-wrap(wrap);
+        @include screen-small{
+            margin: 45px auto 15px;
+        }
+        &--error{
+            border-color: $color-rojo-borde;
+            @include gradient($color-rojo-bg-top, $color-rojo-bg-bottom);
+            .custom-alert__message, .custom-alert__icon{
+                color: $color-rojo;
+            }
+        }
+        &--succes{
+            border-color: $color-verde-borde;
+            @include gradient($color-verde-bg-top, $color-verde-bg-bottom);
+            .custom-alert__message, .custom-alert__icon{
+                color: $color-verde;
+            }
+        }
+    }
+   
+    .custom-alert__message{
+        font-weight: 700;
+        margin: 0;
+        text-align: right;
+        text-shadow: 1px 1px 1px rgba($color-blanco, 0.5);
+        @include flex(1 0 auto);
+    }
+    .custom-alert__icon{
+        background-color: transparent;
+        border: none;
+        font-family: 'FontAwesome';
+        @include flex(0 0 auto);
+        i{
+            font-style: normal;
+        }
+    }
+}

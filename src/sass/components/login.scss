@@ -1,0 +1,144 @@
+.login-component{
+    position: relative;
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    .login-component__main{
+        background-color: #f9f9f9;
+        border: 1px solid #c7c6c6;
+        border-radius: 5px;
+        padding: 20px 10px 10px;
+        margin: 42px auto 20px;
+        @include screen-small{
+            background: url('../images/pattern-form.png') no-repeat top center transparent;;
+            border-color: transparent;
+            background-size: 100%;
+            padding: 20px;
+        }
+    }
+    .login-component__title{
+        color: $color-gris-titulo;
+        font-size: 1.2em;
+        margin: 10px auto 15px;
+        text-align: center;
+    }
+    .login-component__link{
+        color: $color-gris;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        &--blue{
+            color: $color-azul-texto;
+        }
+        &--underline{
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: '';
+                border-bottom: 1px solid;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .login-component__form{
+        padding: 0 10px;
+        .login-component__icon{
+            position: relative;
+            &--email{
+                &::after{
+                    color: $color-gris-iconos;
+                    content: '\f007';
+                    font-family: 'FontAwesome';
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    @include transform(translateY(-50%))
+                }
+            }
+            &--password{
+                &::after{
+                    color: $color-gris-iconos;
+                    content: '\f023';
+                    font-family: 'FontAwesome';
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    @include transform(translateY(-50%))
+                }
+            }
+        }
+        .login-component__input{
+            background-color: $color-gris-input;
+            border: 1px solid transparent;
+            font-size: 1em;
+            height: auto;
+            position: relative;
+            @include transition(all .2s linear);
+            &--text{
+                color: $color-gris;
+                padding: 10px 10px 8px;
+                -webkit-box-shadow: inset 0px 1px 2px 1px rgba($color-negro,0.11);
+                -moz-box-shadow: inset 0px 1px 2px 1px rgba($color-negro,0.11);
+                box-shadow: inset 0px 1px 2px 1px rgba($color-negro,0.11);
+            }
+            &--checkbox{
+                border: 1px solid $color-gris-medio;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 0px 2px 0px rgba($color-negro,0.2);
+                -moz-box-shadow: 0px 0px 2px 0px rgba($color-negro,0.2);
+                box-shadow: 0px 0px 2px 0px rgba($color-negro,0.2);
+            }
+        }
+        .login-component__button{
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+            @include transition(all .2s linear);
+            &--blue{
+                background-color: $color-azul;
+                border: 1px solid rgba($color-negro, 0.4);
+                color: $color-blanco;
+                padding: 12px 45px 10px;
+                &:hover{
+                    background-color: rgba($color-azul, 0.8);
+                    border: 1px solid rgba($color-negro, 0.2);
+                }
+            }
+        }
+        .login-component__label{
+            color: $color-gris-medio;
+            &--remember{
+                font-size: 0.9em;
+                margin: 0;
+            }
+        }
+    }
+    .login-component__account{
+        text-align: center;
+        .login-component__create-account{
+            color: $color-gris;
+            display: inline-block;
+            position: relative;
+            &--underline{
+                &::after{
+                    content: '';
+                    border-bottom: 1px solid $color-gris;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        .login-component__remember-password{
+            color: $color-gris-claro;
+            font-size: 0.78em;
+        }
+    }
+}

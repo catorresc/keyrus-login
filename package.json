@@ -1,0 +1,36 @@
+{
+    "name": "keyrus-login",
+    "version": "1.0.0",
+    "description": "Prueba front Keyrus",
+    "main": "index.js",
+    "dependencies": {
+        "bootstrap": "^4.1.3",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.4"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.24.7",
+        "gulp": "^3.9.1",
+        "gulp-clean": "^0.4.0",
+        "gulp-cli": "^2.0.1",
+        "gulp-plumber": "^1.2.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/catorresc/keyrus-login.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/catorresc/keyrus-login/issues"
+    },
+    "homepage": "https://github.com/catorresc/keyrus-login#readme"
+}
