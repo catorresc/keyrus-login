@@ -16,5 +16,5 @@ gulp
 ## Generación del distribuible
 Correr la siguiente tarea para generar paquete de produccion
 ```
-build
+gulp build
 ```
